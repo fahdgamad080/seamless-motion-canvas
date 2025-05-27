@@ -22,13 +22,13 @@ const Hero = () => {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1 animate-pulse-glow">
               <div className="w-full h-full rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm flex items-center justify-center">
-                <span className="text-3xl font-bold gradient-text">JD</span>
+                <span className="text-3xl font-bold gradient-text">FC</span>
               </div>
             </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up text-white drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
-            <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">Frontend Developer</span>
+            <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">Fahd's Code</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in-up drop-shadow-md" style={{ animationDelay: '0.4s' }}>
@@ -39,21 +39,48 @@ const Hero = () => {
             <Button size="lg" className="bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
               View My Work
             </Button>
-            <Button variant="outline" size="lg" className="border-2 border-white/50 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-              Download Resume
-            </Button>
+            <a
+              href="/FAHD GAMAD.pdf" // Place your PDF in the public folder as 'resume.pdf'
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-white/50 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+              >
+                Download Resume
+              </Button>
+</a>
           </div>
           
           <div className="flex justify-center space-x-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
-              <Github className="h-6 w-6" />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
-              <Linkedin className="h-6 w-6" />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
-              <Mail className="h-6 w-6" />
-            </Button>
+            <a
+  href="https://github.com/fahdgamad080"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
+    <Github className="h-6 w-6" />
+  </Button>
+</a>
+            <a
+  href="https://linkedin.com/in/fahd-gamad-420404200"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
+    <Linkedin className="h-6 w-6" />
+  </Button>
+</a>
+            <a
+  href="mailto:fahdgamad80@gmail.com"
+>
+  <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
+    <Mail className="h-6 w-6" />
+  </Button>
+</a>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="font-bold text-xl gradient-text animate-fade-in">
-            Portfolio
+            Fahd's Code
           </div>
           
           {/* Desktop Navigation */}

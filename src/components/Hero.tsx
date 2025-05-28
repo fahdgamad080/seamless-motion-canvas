@@ -1,6 +1,6 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -36,11 +36,13 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <Button size="lg" className="bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
-              View My Work
-            </Button>
+            <Link to="/projects">
+              <Button size="lg" className="bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
+                View My Work
+              </Button>
+            </Link>
             <a
-              href="/FAHD GAMAD.pdf" // Place your PDF in the public folder as 'resume.pdf'
+              href="/FAHD GAMAD.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"
@@ -52,35 +54,35 @@ const Hero = () => {
               >
                 Download Resume
               </Button>
-</a>
+            </a>
           </div>
           
           <div className="flex justify-center space-x-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <a
-  href="https://github.com/fahdgamad080"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
-    <Github className="h-6 w-6" />
-  </Button>
-</a>
+              href="https://github.com/fahdgamad080"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
+                <Github className="h-6 w-6" />
+              </Button>
+            </a>
             <a
-  href="https://linkedin.com/in/fahd-gamad-420404200"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
-    <Linkedin className="h-6 w-6" />
-  </Button>
-</a>
+              href="https://linkedin.com/in/fahd-gamad-420404200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
+                <Linkedin className="h-6 w-6" />
+              </Button>
+            </a>
             <a
-  href="mailto:fahdgamad80@gmail.com"
->
-  <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
-    <Mail className="h-6 w-6" />
-  </Button>
-</a>
+              href="mailto:fahdgamad80@gmail.com"
+            >
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 backdrop-blur-md hover:scale-110 transition-all duration-300">
+                <Mail className="h-6 w-6" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>

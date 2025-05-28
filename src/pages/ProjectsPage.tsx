@@ -17,7 +17,7 @@ const ProjectsPage = () => {
       longDescription: "This comprehensive e-commerce platform provides a complete shopping experience with advanced features like real-time inventory management, secure payment processing through Stripe, advanced search and filtering, user reviews and ratings, and a powerful admin dashboard for managing products, orders, and customers.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop",
       tech: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      category: "fullstack",
+      category: "ecommerce",
       github: "#",
       demo: "#",
       status: "completed"
@@ -81,6 +81,30 @@ const ProjectsPage = () => {
       github: "#",
       demo: "#",
       status: "completed"
+    },
+    {
+      id: 7,
+      title: "Corporate WordPress Site",
+      description: "Custom WordPress theme development with advanced functionality and responsive design for corporate clients.",
+      longDescription: "Professional WordPress website featuring custom post types, advanced custom fields, multilingual support, SEO optimization, and performance enhancements for enterprise-level clients.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      tech: ["WordPress", "PHP", "MySQL", "ACF", "WPML"],
+      category: "wordpress",
+      github: "#",
+      demo: "#",
+      status: "completed"
+    },
+    {
+      id: 8,
+      title: "Fashion E-commerce Store",
+      description: "Modern e-commerce platform for fashion brands with advanced product filtering and shopping cart functionality.",
+      longDescription: "Comprehensive fashion e-commerce solution with product variations, size guides, wishlist functionality, advanced search filters, and integrated payment processing for seamless shopping experience.",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=400&fit=crop",
+      tech: ["Shopify", "Liquid", "JavaScript", "CSS3", "Stripe"],
+      category: "ecommerce",
+      github: "#",
+      demo: "#",
+      status: "completed"
     }
   ];
 
@@ -88,7 +112,9 @@ const ProjectsPage = () => {
     { id: 'all', name: 'All Projects' },
     { id: 'fullstack', name: 'Full Stack' },
     { id: 'frontend', name: 'Frontend' },
-    { id: 'backend', name: 'Backend' }
+    { id: 'backend', name: 'Backend' },
+    { id: 'wordpress', name: 'WordPress' },
+    { id: 'ecommerce', name: 'E-commerce' }
   ];
 
   const filteredProjects = filter === 'all' 

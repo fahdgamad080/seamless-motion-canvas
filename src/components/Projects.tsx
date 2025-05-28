@@ -3,6 +3,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const projects = [
@@ -11,7 +12,7 @@ const Projects = () => {
       description: "Developed a sleek, high-end WordPress website for Vermellier, a luxury clothing brand, with a focus on minimal design, performance, and brand storytelling.",
       image: "public/Vermellier.png",
       tech: ["WordPress", "WooCommerce", "PHP", "HTML5", "CSS3"],
-      github: "#",
+      github: null,
       demo: "https://vermellier.com/"
     },
     {
@@ -65,12 +66,16 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {project.github && <Link to={project.github}>
                   <Button size="sm" variant="secondary" className="h-8 w-8 p-0">
                     <Github className="h-4 w-4" />
                   </Button>
-                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0">
-                    <ExternalLink className="h-4 w-4" />
-                  </Button>
+                </Link>}
+                  <Link to={project.demo}>
+                    <Button size="sm" variant="secondary" className="h-8 w-8 p-0">
+                      <ExternalLink className="h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               

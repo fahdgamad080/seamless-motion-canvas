@@ -7,12 +7,12 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      title: "Vermellier",
+      description: "Developed a sleek, high-end WordPress website for Vermellier, a luxury clothing brand, with a focus on minimal design, performance, and brand storytelling.",
+      image: "public/Vermellier.png",
+      tech: ["WordPress", "WooCommerce", "PHP", "HTML5", "CSS3"],
       github: "#",
-      demo: "#"
+      demo: "https://vermellier.com/"
     },
     {
       title: "Task Management App",

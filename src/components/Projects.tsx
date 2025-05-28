@@ -34,7 +34,7 @@ const Projects = () => {
     {
       title: "ElAraby Coffee",
       description: "A modern, responsive portfolio website showcasing creative animations, dark mode support, and optimized performance.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+      image: "public/Elaraby Coffee.png",
       tech: ["WordPress", "WooCommerce", "PHP", "HTML5", "CSS3"],
       github: null,
       demo: "https://elarabycoffee.com/"

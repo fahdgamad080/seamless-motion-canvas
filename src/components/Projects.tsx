@@ -16,28 +16,28 @@ const Projects = () => {
       demo: "https://vermellier.com/"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      tech: ["Vue.js", "Firebase", "Vuex", "CSS3"],
-      github: "#",
-      demo: "#"
+      title: "FG Team Agency",
+      description: "Developed FG Team’s portfolio site in Framer with a focus on clean structure, performance, and responsive behavior across devices.",
+      image: "public/FG Team.png",
+      tech: ["Framer", "	HTML5", "CSS3", "UI/UX Design"],
+      github: null,
+      demo: "https://fgteam.framer.website/"
     },
     {
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard that displays current conditions and forecasts with beautiful data visualizations and location-based services.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
-      tech: ["TypeScript", "Chart.js", "API Integration", "PWA"],
-      github: "#",
-      demo: "#"
+      title: "DigitalSync",
+      description: "Built a modern, responsive website for Digital Partners Global using Next.js and Tailwind CSS, emphasizing performance, scalability, and a clean user interface.",
+      image: "public/DigitalSync.png",
+      tech: ["Next.js", "Tailwind CSS", "Vercel Deployment", "TypeScript", "Vite", "React", "HTML5", "CSS3"],
+      github: "https://github.com/fahdgamad080/digital-partners-global",
+      demo: "https://digital-partners-global-rho.vercel.app/"
     },
     {
-      title: "Portfolio Website",
+      title: "ElAraby Coffee",
       description: "A modern, responsive portfolio website showcasing creative animations, dark mode support, and optimized performance.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
-      tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      github: "#",
-      demo: "#"
+      tech: ["WordPress", "WooCommerce", "PHP", "HTML5", "CSS3"],
+      github: null,
+      demo: "https://elarabycoffee.com/"
     }
   ];
 

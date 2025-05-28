@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ArrowLeft, ExternalLink, Github, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -126,45 +125,55 @@ const ProjectsPage = () => {
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
-        <div className="relative container mx-auto px-6 py-20">
-          <div className="flex items-center gap-4 mb-8 animate-fade-in">
+        <div className="relative container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+          <div className="flex items-start sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8 animate-fade-in">
             <Link to="/">
-              <Button variant="ghost" size="icon" className="text-gray-600 dark:text-gray-300 hover:bg-white/10 backdrop-blur-md">
-                <ArrowLeft className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="text-gray-600 dark:text-gray-300 hover:bg-white/10 backdrop-blur-md shrink-0">
+                <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </Link>
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold gradient-text">My Projects</h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
+            <div className="flex-1 min-w-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text leading-tight">
+                My Projects
+              </h1>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 mt-1 sm:mt-2">
                 Explore my latest work and creative solutions
               </p>
             </div>
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap gap-3 mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <Filter className="h-5 w-5 text-gray-500 dark:text-gray-400 mt-2" />
-            {categories.map((category) => (
-              <Button
-                key={category.id}
-                variant={filter === category.id ? "default" : "outline"}
-                onClick={() => setFilter(category.id)}
-                className={`transition-all duration-300 ${
-                  filter === category.id 
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105' 
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-                }`}
-              >
-                {category.name}
-              </Button>
-            ))}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-3 mb-8 sm:mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <Filter className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 dark:text-gray-400 shrink-0" />
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300 sm:hidden">
+                Filter:
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-2 sm:gap-3">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  variant={filter === category.id ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setFilter(category.id)}
+                  className={`text-xs sm:text-sm transition-all duration-300 ${
+                    filter === category.id 
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105' 
+                      : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+                  }`}
+                >
+                  {category.name}
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
       {/* Projects Grid */}
-      <div className="container mx-auto px-6 pb-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 pb-12 sm:pb-16 lg:pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => (
             <Card 
               key={project.id}
@@ -175,15 +184,15 @@ const ProjectsPage = () => {
                 <img 
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-40 sm:h-48 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Status Badge */}
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                   <Badge 
                     variant={project.status === 'completed' ? 'default' : 'secondary'}
-                    className={`${
+                    className={`text-xs ${
                       project.status === 'completed' 
                         ? 'bg-green-500 text-white' 
                         : 'bg-yellow-500 text-white'
@@ -194,35 +203,35 @@ const ProjectsPage = () => {
                 </div>
                 
                 {/* Action Buttons */}
-                <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0 backdrop-blur-md bg-white/20">
-                    <Github className="h-4 w-4" />
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex space-x-1 sm:space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Button size="sm" variant="secondary" className="h-7 w-7 sm:h-8 sm:w-8 p-0 backdrop-blur-md bg-white/20">
+                    <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                   </Button>
-                  <Button size="sm" variant="secondary" className="h-8 w-8 p-0 backdrop-blur-md bg-white/20">
-                    <ExternalLink className="h-4 w-4" />
+                  <Button size="sm" variant="secondary" className="h-7 w-7 sm:h-8 sm:w-8 p-0 backdrop-blur-md bg-white/20">
+                    <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4" />
                   </Button>
                 </div>
 
                 {/* Project Info Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-sm opacity-90">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-xs sm:text-sm opacity-90 line-clamp-3">
                     {project.longDescription}
                   </p>
                 </div>
               </div>
               
-              <CardHeader className="pb-3">
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors duration-300">
+              <CardHeader className="p-4 sm:p-6 pb-2 sm:pb-3">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
               </CardHeader>
               
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
+              <CardContent className="p-4 sm:p-6 pt-0">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
+                  {project.tech.slice(0, 4).map((tech) => (
                     <Badge 
                       key={tech} 
                       variant="outline" 
@@ -231,6 +240,14 @@ const ProjectsPage = () => {
                       {tech}
                     </Badge>
                   ))}
+                  {project.tech.length > 4 && (
+                    <Badge 
+                      variant="outline" 
+                      className="text-xs text-gray-500"
+                    >
+                      +{project.tech.length - 4}
+                    </Badge>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -238,8 +255,8 @@ const ProjectsPage = () => {
         </div>
 
         {filteredProjects.length === 0 && (
-          <div className="text-center py-20 animate-fade-in">
-            <p className="text-gray-500 dark:text-gray-400 text-lg">
+          <div className="text-center py-12 sm:py-20 animate-fade-in">
+            <p className="text-gray-500 dark:text-gray-400 text-base sm:text-lg">
               No projects found in this category.
             </p>
           </div>

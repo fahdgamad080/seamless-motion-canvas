@@ -40,7 +40,7 @@ const Index = () => {
           
           <div className="border-t border-gray-800 pt-8">
             <p className="text-gray-400">
-              © 2025 Frontend Developer Portfolio. Crafted with ❤️ using React & Tailwind CSS.
+              © 2025 Fahd's Code Portfolio.
             </p>
           </div>
         </div>

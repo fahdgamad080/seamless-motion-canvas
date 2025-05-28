@@ -52,7 +52,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium">Email</h4>
-                    <p className="text-gray-600 dark:text-gray-300">fahdgamad80@gmail.com</p>
+                    <a href="mailto:fahdgamad80@gmail.com" className="text-gray-600 dark:text-gray-300 hover:underline">fahdgamad80@gmail.com</a>
                   </div>
                 </div>
                 
@@ -62,7 +62,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium">Phone</h4>
-                    <p className="text-gray-600 dark:text-gray-300">+20 101 405 7017</p>
+                    <a href="tel:+20101407017" className="text-gray-600 dark:text-gray-300 hover:underline">+20 101 407 017</a>
                   </div>
                 </div>
                 
@@ -72,8 +72,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium">Location</h4>
-                    <p className="text-gray-600 dark:text-gray-300">Port Said, EG</p>
-                  </div>
+                    <a href="https://maps.app.goo.gl/UdM2HctPRvSy6eMq8" className="text-gray-600 dark:text-gray-300 hover:underline">Port Said, EG</a> </div>
                 </div>
               </div>
             </div>

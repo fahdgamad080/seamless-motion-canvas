@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: "Vermellier",
       description: "Developed a sleek, high-end WordPress website for Vermellier, a luxury clothing brand, with a focus on minimal design, performance, and brand storytelling.",
-      image: "public/Vermellier.png",
+      image: "/Vermellier.png",
       tech: ["WordPress", "WooCommerce", "PHP", "HTML5", "CSS3"],
       github: null,
       demo: "https://vermellier.com/"

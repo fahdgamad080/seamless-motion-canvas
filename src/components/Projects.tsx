@@ -18,7 +18,7 @@ const Projects = () => {
     {
       title: "FG Team Agency",
       description: "Developed FG Team’s portfolio site in Framer with a focus on clean structure, performance, and responsive behavior across devices.",
-      image: "public/FG Team.png",
+      image: "/FG Team.png",
       tech: ["Framer", "	HTML5", "CSS3", "UI/UX Design"],
       github: null,
       demo: "https://fgteam.framer.website/"
@@ -26,7 +26,7 @@ const Projects = () => {
     {
       title: "DigitalSync",
       description: "Built a modern, responsive website for Digital Partners Global using Next.js and Tailwind CSS, emphasizing performance, scalability, and a clean user interface.",
-      image: "public/DigitalSync.png",
+      image: "/DigitalSync.png",
       tech: ["Next.js", "Tailwind CSS", "Vercel Deployment", "TypeScript", "Vite", "React", "HTML5", "CSS3"],
       github: "https://github.com/fahdgamad080/digital-partners-global",
       demo: "https://digital-partners-global-rho.vercel.app/"
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       title: "ElAraby Coffee",
       description: "A modern, responsive portfolio website showcasing creative animations, dark mode support, and optimized performance.",
-      image: "public/Elaraby Coffee.png",
+      image: "/Elaraby Coffee.png",
       tech: ["WordPress", "WooCommerce", "PHP", "HTML5", "CSS3"],
       github: null,
       demo: "https://elarabycoffee.com/"

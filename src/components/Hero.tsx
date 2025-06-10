@@ -37,9 +37,9 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Link to="/projects">
-              <Button size="lg" className="bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
+              {/*<Button size="lg" className="bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
                 View My Work
-              </Button>
+              </Button>*/}
             </Link>
             <a
               href="/FAHD GAMAD.pdf"
